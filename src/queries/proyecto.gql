@@ -1,0 +1,51 @@
+query {
+  proyectos {
+    data {
+      attributes {
+        nombre
+        descripcion
+        fecha_ingreso
+        fecha_registro_dominio
+        fecha_registro_hosting
+        subdominio_pruebas
+        url
+        Observaciones
+        createdAt
+        categoria {
+          data {
+            attributes {
+              nombre
+              descripcion
+            }
+          }
+        }
+        proveedor_hosting {
+          data {
+            attributes {
+              nombre
+              url
+            }
+          }
+        }
+        representante {
+          data {
+            attributes {
+              nombre
+              telefono
+              correo
+            }
+          }
+        }
+        dominio {
+          data {
+            attributes {
+              nombre
+              url
+            }
+          }
+        }
+        accesos
+      }
+    }
+  }
+}
