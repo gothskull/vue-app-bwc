@@ -43,6 +43,14 @@ module.exports = {
         }
         return options
       })
+    //Posible configuracion para habilitatr el uso de aechivos .gql
+    //Ref https://www.endpointdev.com/blog/2021/10/vue-graphql-integration-apollo-client/
+    config.module
+      .rule('graphql')
+      .test(/\.(graphql|gql)$/)
+      .use('graphql-tag/loader')
+      .loader('graphql-tag/loader')
+      .end();
   },
   transpileDependencies: ['vue-echarts', 'resize-detector'],
 }

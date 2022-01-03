@@ -1,0 +1,55 @@
+import gql from 'graphql-tag'
+
+export const TMP_QUERY = gql`
+    query{
+  proyectos {
+    data{
+      attributes{
+        nombre
+        descripcion
+        fecha_ingreso
+        fecha_registro_dominio
+        fecha_registro_hosting
+        subdominio_pruebas
+        url
+        Observaciones
+        createdAt
+        categoria{
+          data{
+            attributes{
+              nombreCategoria
+              descripcion
+            }
+          }
+        }
+        proveedor_hosting{
+          data{
+            attributes{
+              nombreHost
+              url
+            }
+          }
+        }
+        representante{
+          data{
+            attributes{
+              nombreRepresentante
+              telefono
+              correo
+            }
+          }
+        }
+        dominio{
+          data{
+            attributes{
+              nombreDominio
+              url
+            }
+          }
+        }
+        accesos
+      }
+    }
+  }
+}
+`
